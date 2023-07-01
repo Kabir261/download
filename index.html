@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Download Any Link
+    </title>
+</head>
+<style>
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+input{
+    margin-right: 20px;
+    width: 500px;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    outline: none;
+}
+button{
+ 
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
+</style>
+<body>
+    <div class="container">
+        
+            <input type="text" name="" id="input">
+            <button type="submit" id="dBtn">Download</button>
+        
+    </div>
+</body>
+
+<script>
+    const input = document.getElementById("input");
+    const dbutton = document.getElementById("dBtn");
+
+    dbutton.addEventListener("click", async () =>{
+
+        try {
+            const response = await fetch(input.value);
+            
+        } catch (error) {
+            
+        }
+    })
+</script>
+</html>
