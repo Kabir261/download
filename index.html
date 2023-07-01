@@ -48,9 +48,13 @@ button{
 
         try {
             const response = await fetch(input.value);
-            
+            const file = await response.blob();
+            const link= document.createElement("a");
+            link.href= URL.createObjectURL(file);
+            link.download = new Date().getTime();
+            link.click();
         } catch (error) {
-            
+            alert("Error downloading");
         }
     })
 </script>
